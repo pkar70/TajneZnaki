@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="TajneZnaki.ADR"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TajneZnaki"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded"
+    >
+
+        <Grid Margin="2,2,2,2">
+            <Grid.RowDefinitions>
+                <RowDefinition x:Name="uiTitle" Height="Auto" />
+                <RowDefinition x:Name="uiTypy" Height="*" />
+                <RowDefinition x:Name="uiSearch" Height="Auto" />
+                <RowDefinition x:Name="uiSubstancje" Height="*" />
+            </Grid.RowDefinitions>
+
+            <local:TextBlockPageTitle Text="ADR" />
+
+        <local:StretchedListView Grid.Row="1" x:Name="uiListaTypy">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:StretchedGrid Cols="100,*">
+                        <TextBlock FontWeight="Bold" Text="{Binding symbol}" Margin="0,0,5,0" />
+                        <TextBlock Grid.Column="1" Text="{Binding opis}" />
+                    </local:StretchedGrid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </local:StretchedListView>
+
+        <StackPanel Grid.Row="2">
+            <TextBox Name="uiTyp" Width="100" HorizontalAlignment="Center" TextChanged="uiQuery_Changed" />
+            <Rectangle Width="200" HorizontalAlignment="Center" Height="4" />
+            <TextBox Name="uiSubst" Width="200" HorizontalAlignment="Center" TextChanged="uiQuery_Changed" InputScope="Digits"/>
+        </StackPanel>
+
+        <local:StretchedListView Grid.Row="3" x:Name="uiListaSubst">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:StretchedGrid Cols="100,*">
+                        <TextBlock FontWeight="Bold" Text="{Binding symbol}" Margin="0,0,5,0" />
+                        <TextBlock Grid.Column="1" Text="{Binding opis}" TextWrapping="Wrap" />
+                    </local:StretchedGrid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </local:StretchedListView>
+
+    </Grid>
+</Page>

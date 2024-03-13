@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="TajneZnaki.Rurociagi"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TajneZnaki"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <local:StretchedGrid Margin="2,2,2,2">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+    <StackPanel  >
+        <local:UserRura Tlo="Red" Symbol="H" Opis="hydrant" />
+        <local:UserRura Tlo="White" Symbol="Z" Opis="zasuwa na przewodzie wodociągowym przesyłowym lub rozdzielczym" />
+        <local:UserRura Tlo="White" Symbol="D" Opis="zasuwa lub zawór na połączeniu do odbiorcy" />
+        <local:UserRura Tlo="White" Symbol="S" Opis="zasuwa na odgałęzieniu odwadniającym (spust)" />
+        <local:UserRura Tlo="White" Symbol="O" Opis="odpowietrzenie rurociągu" />
+        <local:UserRura Tlo="White" Symbol="U" Opis="miejsce przyłączenia do przewodu wodociągowego przewodów uziemiających urządzenia elektroenergetyczne" />
+        <local:UserRura Tlo="White" Symbol="Uk" Opis="miejsce przyłączenia do przewodu wodociągowego przewodów od stacji ochrony katodowej" />
+        <local:UserRura Tlo="White" Symbol="Ud" Opis="miejsce przyłączenia do przewodu wodociągowego przewodów od stacji drenażowej" />
+        <local:UserRura Tlo="White" Symbol="P" Opis="punkt pomiarów elektrycznych rurociągu (dla celów ochrony przeciwkorozyjnej)" />
+        <local:UserRura Tlo="Green" Symbol="??" Opis="ciepłociąg" />
+
+
+        <local:UserRura Tlo="Yellow" Symbol="Z" Opis="tablica zawieradła mechanicznego" />
+        <local:UserRura Tlo="Yellow" Symbol="O" Opis="tablica odwadniacza" />
+        <local:UserRura Tlo="Yellow" Symbol="S" Opis="tablica zawieradła cieczowego" />
+        <local:UserRura Tlo="Yellow" Symbol="W" Opis="tablica sączka węchowego" />
+        <local:UserRura Tlo="Yellow" Symbol="U" Opis="tablica zawieradła mechanicznego na rurociągu upustowym" />
+        <local:UserRura Tlo="Yellow" Symbol="P" Opis="tablica punktu pomiarowego" />
+        <local:UserRura Tlo="Yellow" Symbol="K" Opis="kurek" />
+        <local:UserRura Tlo="Yellow" Symbol="T" Opis="odgałęzienie" />
+        <local:UserRura Tlo="Yellow" Symbol="Pz" Opis="punkt załamania" />
+
+        <local:UserRura Tlo="Yellow" Symbol="??" Opis="gaz ziemny" />
+        <local:UserRura Tlo="Red" Symbol="??" Opis="gaz węglowy" />
+        <local:UserRura Tlo="DeepSkyBlue" Symbol="??" Opis="inne gazy" />
+
+
+
+    </StackPanel>
+        </ScrollViewer>
+    </local:StretchedGrid>
+</Page>

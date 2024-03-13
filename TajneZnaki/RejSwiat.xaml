@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="TajneZnaki.RejSwiat"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TajneZnaki"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded">
+
+    <Page.Resources>
+        <local:KonwersjaVisibilityHist x:Key="KonwersjaVisibilityHist"/>
+        <local:KonwersjaVisibilityDet x:Key="KonwersjaVisibilityDet"/>
+    </Page.Resources>
+    
+    <Grid Margin="2,2,2,2">
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="uiTitle" Height="Auto" />
+            <RowDefinition x:Name="uiSearch" Height="Auto" />
+            <RowDefinition x:Name="uiMatches" Height="*" />
+        </Grid.RowDefinitions>
+
+        <local:TextBlockPageTitle Text="Oznaczenia krajów" />
+
+        <local:StretchedGrid Grid.Row="1" Rows="Auto,Auto,Auto" Margin="0,5,0,5">
+            <local:StretchedGrid Cols="80,*">
+                <TextBox Name="uiSymbol" Margin="0,0,4,0" TextChanged="uiSymbol_TextChanged"/>
+                <TextBox Name="uiKraj" Grid.Column="1"  TextChanged="uiKraj_TextChanged"/>
+            </local:StretchedGrid>
+            <CheckBox Name="uiDetails" Grid.Row="1" Content="Show details" Checked="uiCheckbox_Changed" Unchecked="uiCheckbox_Changed" />
+            <CheckBox Name="uiHistory" Grid.Row="1" Content="Show historic" Checked="uiCheckbox_Changed" Unchecked="uiCheckbox_Changed" HorizontalAlignment="Right"/>
+
+            <!--<ComboBox Name="uiKiedy" row="1">
+                <ComboBoxItem Content="1909 Konwencja Paryska" />
+                <ComboBoxItem Content="1924 Konwencja Paryska" />
+                <ComboBoxItem Content="Konwencja wiedeńska (po 1977)" IsSelected="True"/>
+            </ComboBox>-->
+            <TextBlock Name="uiMatchCount" Grid.Row="2" />
+        </local:StretchedGrid>
+
+        <local:StretchedListView Grid.Row="2" x:Name="uiLista">
+            <ListView.ItemTemplate>
+
+                <DataTemplate>
+                <local:StretchedGrid Rows="A,A,A" MinHeight="5">
+                        <local:StretchedGrid Cols="80,*,Auto,Auto,Auto">
+                            <TextBlock Text="{Binding symbol}" />
+                            <TextBlock Text="{Binding kraj}" Grid.Column="1" />
+                            <TextBlock Text="{Binding rokOd}" Grid.Column="2" />
+                            <TextBlock Text="-" Grid.Column="3" Visibility="{Binding kraj, Converter={StaticResource KonwersjaVisibilityHist}}"/>
+                            <TextBlock Text="{Binding rokDo}" Grid.Column="4"  Visibility="{Binding kraj, Converter={StaticResource KonwersjaVisibilityHist}}"/>
+                        </local:StretchedGrid>
+                        <TextBlock Text="{Binding symbolPrev}" Grid.Row="1" HorizontalAlignment="Left"  Visibility="{Binding kraj, Converter={StaticResource KonwersjaVisibilityDet}}"/>
+                        <TextBlock Text="{Binding symbolNext}" Grid.Row="1" HorizontalAlignment="Right" Visibility="{Binding kraj, Converter={StaticResource KonwersjaVisibilityDet}}"/>
+                        <TextBlock Text="{Binding comment}" Grid.Row="2" FontSize="9" Visibility="{Binding kraj, Converter={StaticResource KonwersjaVisibilityDet}}"/>
+                    </local:StretchedGrid>
+                </DataTemplate>
+                </ListView.ItemTemplate>
+        </local:StretchedListView>
+
+    </Grid>
+</Page>

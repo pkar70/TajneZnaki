@@ -15,5 +15,6 @@
         <Button Content="Rejestr PL" Click="uiRejPL_Click" HorizontalAlignment="Center" Margin="5,5,5,5"  Width="110"/>
         <Button Content="ADR" Click="uiADR_Click" HorizontalAlignment="Center" Margin="5,5,5,5"  Width="110"/>
         <Button Content="Hydr/Zaw" Click="uiTablOrient_Click" HorizontalAlignment="Center" Margin="5,5,5,5"  Width="110"/>
+        <Button Content="Semafory" Click="uiSemafory_Click" HorizontalAlignment="Center" Margin="5,5,5,5"  Width="110"/>
     </StackPanel>
 </Page>

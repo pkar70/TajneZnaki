@@ -11,7 +11,7 @@
 
     <local:StretchedGrid Cols="40,*" >
         <Border HorizontalAlignment="Center" BorderThickness="0" Name="uiTablBack" Width="40" >
-            <TextBlock Name="uiSymbol" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Name="uiSymbol" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Border>
         <TextBlock Name="uiOpis" Grid.Column="1" VerticalAlignment="Center" TextWrapping="Wrap" Margin="4,0,0,0"/>
     </local:StretchedGrid>

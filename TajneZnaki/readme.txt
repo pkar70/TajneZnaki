@@ -11,7 +11,7 @@ app "tajemnicze znaki" - mainpage analogicznie do kartownika
 Rozpoznanie zdjęcia ostatniego (OCR) lub bezpośrednio z camera (OCR), tyle że bezpośrednio camera można dotknięciem wskazać miejsce i potem w liście rozpoznanych stringów wyszukać te które w tym miejscu na ekranie są.
 
 Dawać linki do wikipedii
-
+https://spedytor.org/jak-poprawnie-czytac-tablice-adr/
 
 ===== rejestracje świat 
 * panstwa: - ikonka obrazek PL

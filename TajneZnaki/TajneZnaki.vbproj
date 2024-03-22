@@ -156,6 +156,9 @@
     <Compile Include="Rurociagi.xaml.vb">
       <DependentUpon>Rurociagi.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SemaforPociag.xaml.vb">
+      <DependentUpon>SemaforPociag.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SharedUserControls\AppBarButtOpenWeb.vb" />
     <Compile Include="SharedUserControls\StretchedGrid.vb" />
     <Compile Include="SharedUserControls\StretchedGridBlue.vb" />
@@ -165,6 +168,10 @@
     <Compile Include="UserRura.xaml.vb">
       <DependentUpon>UserRura.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserSemafor.xaml.vb">
+      <DependentUpon>UserSemafor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserSemaforSwiatla.vb" />
     <Compile Include="UserTablRej.xaml.vb">
       <DependentUpon>UserTablRej.xaml</DependentUpon>
     </Compile>
@@ -221,7 +228,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SemaforPociag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserRura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserSemafor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

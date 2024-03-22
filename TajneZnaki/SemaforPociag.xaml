@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="TajneZnaki.SemaforPociag"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TajneZnaki"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <local:StretchedGrid Margin="2,2,2,2">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel  >
+                <TextBlock HorizontalAlignment="Center" FontWeight="Bold" Text="Półsamoczynne" />
+                <local:UserSemafor Swiatla="0,0,1,0,0" Opis="Stój" />
+                <local:UserSemafor Swiatla="0,0,1,0,f" Opis="Zastępczy" />
+                <local:UserSemafor Swiatla="1,0,0,0,0" Opis="Max/Max" />
+                <local:UserSemafor Swiatla="f,0,0,0,0" Opis="Max/Max lub Max/100" />
+                <local:UserSemafor Swiatla="0,f,0,0,0" Opis="Max/40-60" />
+                <local:UserSemafor Swiatla="0,1,0,0,0" Opis="Max/Stój" />
+                <local:UserSemafor Swiatla="1,0,0,1,0" Opis="40/Max, jeśli żółta kreska: 60/Max, jeśli zielona: 100/Max" />
+                <local:UserSemafor Swiatla="f,0,0,1,0" Opis="40/100, jeśli żółta kreska: 60/100, jeśli zielona: 100/100" />
+                <local:UserSemafor Swiatla="0,f,0,1,0" Opis="40/40, jeśli żółta kreska: 60/40, jeśli zielona: 100/40" />
+                <local:UserSemafor Swiatla="0,1,0,1,0" Opis="40/Stój, jeśli żółta kreska: 60/Stój, jeśli zielona: 100/Stój" />
+
+                <TextBlock HorizontalAlignment="Center" FontWeight="Bold" Text="SBL dwustawna" />
+                <local:UserSemafor Swiatla="0,1" Opis="wolna droga" />
+                <local:UserSemafor Swiatla="1,0" Opis="Stój" />
+
+                <TextBlock HorizontalAlignment="Center" FontWeight="Bold" Text="SBL trzy/czterostawna" />
+                <local:UserSemafor Swiatla="1,0,0" Opis="wolna droga tu i dalej" />
+                <local:UserSemafor Swiatla="0,1,0" Opis="Stój" />
+                <local:UserSemafor Swiatla="0,0,1" Opis="wolna droga, potem Stój" />
+                <TextBlock HorizontalAlignment="Center" FontWeight="Bold" Text="SBL czterostawna" />
+                <local:UserSemafor Swiatla="f,0,0" Opis="Max tu i dwa dalej (a nie trzy), lub Max/100, " />
+
+            </StackPanel>
+        </ScrollViewer>
+    </local:StretchedGrid>
+</Page>

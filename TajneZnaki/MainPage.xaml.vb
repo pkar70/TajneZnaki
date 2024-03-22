@@ -20,5 +20,7 @@ Public NotInheritable Class MainPage
     Private Sub uiTablOrient_Click(sender As Object, e As RoutedEventArgs)
         Me.Navigate(GetType(Rurociagi))
     End Sub
-
+    Private Sub uiSemafory_Click(sender As Object, e As RoutedEventArgs)
+        Me.Navigate(GetType(SemaforPociag))
+    End Sub
 End Class

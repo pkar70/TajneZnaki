@@ -142,6 +142,7 @@
     <Compile Include="App.xaml.vb">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GlownyGuzik.vb" />
     <Compile Include="MainPage.xaml.vb">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -155,6 +156,9 @@
     </Compile>
     <Compile Include="Rurociagi.xaml.vb">
       <DependentUpon>Rurociagi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samoloty.xaml.vb">
+      <DependentUpon>Samoloty.xaml</DependentUpon>
     </Compile>
     <Compile Include="SemaforPociag.xaml.vb">
       <DependentUpon>SemaforPociag.xaml</DependentUpon>
@@ -225,6 +229,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Rurociagi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samoloty.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

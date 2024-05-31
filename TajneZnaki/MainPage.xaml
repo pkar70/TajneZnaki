@@ -11,10 +11,11 @@
     <StackPanel>
         <local:TextBlockPageTitle Text="Tajne znaki" />
         <local:TextBlockAppVersion />
-        <Button Content="Rejestr świat" Click="uiRejSwiat_Click" HorizontalAlignment="Center" Margin="5,5,5,5" Width="110" />
-        <Button Content="Rejestr PL" Click="uiRejPL_Click" HorizontalAlignment="Center" Margin="5,5,5,5"  Width="110"/>
-        <Button Content="ADR" Click="uiADR_Click" HorizontalAlignment="Center" Margin="5,5,5,5"  Width="110"/>
-        <Button Content="Hydr/Zaw" Click="uiTablOrient_Click" HorizontalAlignment="Center" Margin="5,5,5,5"  Width="110"/>
-        <Button Content="Semafory" Click="uiSemafory_Click" HorizontalAlignment="Center" Margin="5,5,5,5"  Width="110"/>
+        <local:GlownyGuzik Content="Rejestr świat" Click="uiRejSwiat_Click" />
+        <local:GlownyGuzik Content="Rejestr PL" Click="uiRejPL_Click" />
+        <local:GlownyGuzik Content="Samoloty" Click="uiSamoloty_Click" />
+        <local:GlownyGuzik Content="ADR" Click="uiADR_Click" />
+        <local:GlownyGuzik Content="Hydr/Zaw" Click="uiTablOrient_Click" />
+        <local:GlownyGuzik Content="Semafory" Click="uiSemafory_Click" />
     </StackPanel>
 </Page>

@@ -23,4 +23,9 @@ Public NotInheritable Class MainPage
     Private Sub uiSemafory_Click(sender As Object, e As RoutedEventArgs)
         Me.Navigate(GetType(SemaforPociag))
     End Sub
+
+    Private Sub uiSamoloty_Click(sender As Object, e As RoutedEventArgs)
+        Me.Navigate(GetType(Samoloty))
+    End Sub
+
 End Class

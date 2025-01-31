@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="TajneZnaki.EAN"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TajneZnaki"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid Margin="2,2,2,2">
+            <Grid.RowDefinitions>
+                <RowDefinition x:Name="uiTitle" Height="Auto" />
+                <RowDefinition x:Name="uiSearch" Height="Auto" />
+                <RowDefinition x:Name="uiMatches" Height="*" />
+            </Grid.RowDefinitions>
+
+            <local:TextBlockPageTitle Text="European Article Number" />
+
+            <local:StretchedGrid Grid.Row="1" Rows="Auto,Auto" Margin="0,5,0,5">
+                <local:StretchedGrid Cols="60,*">
+                    <TextBox Name="uiSymbol" Margin="0,0,4,0" TextChanged="uiSymbol_TextChanged" InputScope="Digits"/>
+                    <TextBox Name="uiKraj" Grid.Column="1"  TextChanged="uiKraj_TextChanged"/>
+                </local:StretchedGrid>
+                <TextBlock Name="uiMatchCount" Grid.Row="1" />
+            </local:StretchedGrid>
+
+            <local:StretchedListView Grid.Row="2" x:Name="uiLista">
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+                        <local:StretchedGrid Cols="70,*">
+                        <TextBlock Text="{Binding displayNum}" HorizontalAlignment="Center"/>
+                        <TextBlock Text="{Binding kraj}" Grid.Column="3" Margin="4,0,0,0"/>
+                        </local:StretchedGrid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </local:StretchedListView>
+
+        </Grid>
+
+</Page>

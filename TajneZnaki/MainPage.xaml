@@ -11,11 +11,12 @@
     <StackPanel>
         <local:TextBlockPageTitle Text="Tajne znaki" />
         <local:TextBlockAppVersion />
-        <local:GlownyGuzik Content="Rejestr świat" Click="uiRejSwiat_Click" />
-        <local:GlownyGuzik Content="Rejestr PL" Click="uiRejPL_Click" />
-        <local:GlownyGuzik Content="Samoloty" Click="uiSamoloty_Click" />
-        <local:GlownyGuzik Content="ADR" Click="uiADR_Click" />
-        <local:GlownyGuzik Content="Hydr/Zaw" Click="uiTablOrient_Click" />
-        <local:GlownyGuzik Content="Semafory" Click="uiSemafory_Click" />
+        <local:GlownyGuzik Content="Rejestr świat" GoPage="RejSwiat" />
+        <local:GlownyGuzik Content="Rejestr PL" GoPage="RejPL" />
+        <local:GlownyGuzik Content="EAN" GoPage="EAN" />
+        <local:GlownyGuzik Content="Samoloty" GoPage="Samoloty" />
+        <local:GlownyGuzik Content="ADR" GoPage="ADR" />
+        <local:GlownyGuzik Content="Hydr/Zaw" GoPage="Rurociagi" />
+        <local:GlownyGuzik Content="Semafory" GoPage="SemaforPociag" />
     </StackPanel>
 </Page>
